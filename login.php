@@ -79,10 +79,17 @@
                 </form>
         </div>
     <?php endif; ?>
-    <!-- Starting Assignment 2!  Creating the 'Create Account' section -->
+
+    <!-- Starting Assignment 2!  Creating the 'Create Account' section  if the user is allowed-->
+    <?php $allowlist = array(
+          '129.82.46.226'
+    );
+    ?>
+    <?php if( in_array($_SERVER['REMOTE_ADDR'], $allowlist ) ):?>
     <div class="create_account">
         New to this site? <a id="create_account_link" href="create_account.php">Create an account</a>.
     </div>
+    <?php endif; ?>
 
     <?php
     // function to test if the connectin to the database was successul:

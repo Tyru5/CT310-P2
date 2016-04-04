@@ -45,7 +45,7 @@ class database extends PDO{
         $val = password_verify( $password,  $res );
         return $val;
       }
-      
+
       // member function that finds and sends the correct user the email for reseting instrucitons:
       function send_email($email){
       	$sql_email = $this->query( "SELECT count(*) FROM users WHERE email = '$email' " );
@@ -79,7 +79,7 @@ class database extends PDO{
       		echo "<p class=\"notificationS\">Sorry, there is no user with the email \"$email\" in our records</p>";
       	}
       }
-      
+
       // member function to update the password of the inputed email:
       function update_password($email, $newPassword){
       	$sql_update = $this->query( "UPDATE users SET password = '$newPassword' WHERE email = '$email' " );

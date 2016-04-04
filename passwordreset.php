@@ -12,10 +12,10 @@
     ?>
   </head>
     <body>
-		
+
 		<!-- Setting up the connection with the database -->
 		<?php $db = new database();?>
-		
+
         <div class="pageContents">
             <?php
             // Setting the heading for the page:
@@ -35,7 +35,7 @@
 				<?php endif; ?>
 			</div>
 
-			<?php 
+			<?php
 				// ALL functions for encapsulting the form above
 			if( isset($_POST['submit_reset']) ){
 				// 1) first --> wanna check that the user input the same password:
