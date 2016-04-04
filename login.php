@@ -82,8 +82,8 @@
 
     <!-- Starting Assignment 2!  Creating the 'Create Account' section  if the user is allowed-->
     <?php $allowlist = array(
-          '129.82.46.226'
-          '10.83.145.248'// tyru5::laptop::IP
+          '129.82.46.226',
+          '10.83.145.248'
     );
     ?>
     <?php if( in_array($_SERVER['REMOTE_ADDR'], $allowlist ) ):?>
