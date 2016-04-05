@@ -81,12 +81,7 @@
     <?php endif; ?>
 
     <!-- Starting Assignment 2!  Creating the 'Create Account' section  if the user is allowed-->
-    <?php $allowlist = array(
-          '129.82.46.226',
-          '10.83.145.248'
-    );
-    ?>
-    <?php if( in_array($_SERVER['REMOTE_ADDR'], $allowlist ) ):?>
+    <?php if( $_SERVER['REMOTE_ADDR'] == '129.82.44' || $_SERVER['REMOTE_ADDR'] == '129.82.45' ):?>
     <div class="create_account">
         New to this site? <a id="create_account_link" href="create_account.php">Create an account</a>.
     </div>
