@@ -47,6 +47,7 @@
 
           if( $valid_login ){
             $_SESSION['USERNAME'] = $username;
+            $_SESSION['start_time'] = time();
           } //if $valid_login
         } // isset()
       } // endif( isset($_POST['SUBMIT_CRED']) )
@@ -73,6 +74,7 @@
     <?php else: ?>
         <div class="logout_message">
             <p>You are logged in as <?php echo $_SESSION['USERNAME'] . "!"; ?></p>
+            <p>You have been logged in for <?php echo time() - $_SESSION['start_time'];?> seconds.</p>
                 <form method="post" action="login.php">
                     <input type="hidden" name="LOGOUT" >
                     <input type="submit" value="Logout" >
