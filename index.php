@@ -35,9 +35,8 @@
         echo array_reduce(  $animal_tree->getIterable(),
                             function ($carry, $item){
                               return  $carry
-                                    . "<div class=\"frmt\"><a href=\"animal_view.php?id="
-                                    . $item->getID()
-                                    . "\">"
+                                    . "<div class=\"frmt\">
+                                    . "
                                     ."<img src=\"assets/animal_data/images/"
                                     . $item->getImageSrc()
                                     . "\" class=\"welcome_imgFrmt\"><figcaption>"
