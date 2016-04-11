@@ -109,7 +109,7 @@
 
 				$image_tmpname = $_FILES['image_filename']['name'];
         // had to change the path where to put the images:
-				$imgdir = "assets/images";
+				$imgdir = "assets/uploads";
 				$imgname = $imgdir.$image_tmpname;
 				if(move_uploaded_file($_FILES['image_filename']['tmp_name'], $imgname))
 				{
