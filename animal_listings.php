@@ -60,13 +60,15 @@
 		{?>
 			<p>
 			<img class="animalImg" src="<?php echo $row['pet_image_path'];?>" width="300px" height="300px" /><br>
-			Name: <?php echo $row['pet_name'];?><br>
-			Species: <?php echo $row['pet_species'];?><br>
-			Breed: <?php echo $row['pet_breed'];?><br>
-			Age: <?php echo $row['pet_age'];?> yrs<br>
-			Weight: <?php echo $row['pet_weight'];?> lbs<br>
-			Description: <?php echo $row['pet_description'];?><br>
-			<a href=<?php echo 'animal_view.php?id='. $row['id']; ?> >Click here to view</a>
+      <ul class="animalEntry">
+		      <li>Name: <?php echo $row['pet_name'];?></li>
+			    <li>Species: <?php echo $row['pet_species'];?></li>
+			    <li>Breed: <?php echo $row['pet_breed'];?></li>
+			    <li>Age: <?php echo $row['pet_age'];?> yrs</li>
+			    <li>Weight: <?php echo $row['pet_weight'];?> lbs</li>
+			    <li>Description: <?php echo $row['pet_description'];?></li>
+			    <li><a href=<?php echo 'animal_view.php?id='. $row['id']; ?> >Click here to view</a></li>
+        </ul>
 			</p>
 			<hr>
 		<?php
