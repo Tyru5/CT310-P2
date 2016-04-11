@@ -10,5 +10,6 @@ CREATE TABLE animals(
        pet_breed varchar(10),
        pet_age int(3),
        pet_description varchar(145),
-       pet_weight int(3)
+       pet_weight int(3),
+	   pet_comments varchar(1000)
 );
