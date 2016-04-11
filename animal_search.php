@@ -1,7 +1,7 @@
 <?php
 include 'lib/database.php';
 //get the animal parameter from URL
-$id=$_GET["animal"];
+$id = filter_var($_GET["animal"], FILTER_SANITIZE_STRING); // sanitize inputs main
 //setting up the database connection:
 $db = new database();
 
