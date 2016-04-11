@@ -87,6 +87,32 @@ class database extends PDO{
       	echo "<script type='text/javascript'>alert('$message');</script>";
       }
 
+      // function to lookup animal based on the ajax call:
+      function search_animal($animal){
+          $animal_stmt = $this->query("SELECT count(*) FROM animals WHERE pet_name =  '$animal'");
+          if($animal_stmt->fetchColumn() > 0){
+             // echo "exists! <br>";
+             $res = $this->query("SELECT pet_name FROM animals WHERE pet_name = '$animal'");
+             return $res->fetchColumn();
+          } else {
+             // echo "non existant <br>";
+             return null; // negate top statement.
+          }
+      }
+
+      // member function to obtain the right id number of the pet image:
+      function getAnimal_id($animal) {
+          $animal_stmt = $this->query("SELECT count(*) FROM animals WHERE pet_name =  '$animal'");
+          if($animal_stmt->fetchColumn() > 0){
+             // echo "exists! <br>";
+             $res = $this->query("SELECT id FROM animals WHERE pet_name = '$animal'");
+             return $res->fetchColumn();
+          } else {
+             // echo "non existant <br>";
+             return null; // negate top statement.
+          }
+      }
+
 }
 
  ?>
