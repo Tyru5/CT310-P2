@@ -87,13 +87,14 @@
         		$pet_species = filter_var($_POST['pet_species'], FILTER_SANITIZE_STRING);
         		$pet_breed = filter_var($_POST['pet_breed'], FILTER_SANITIZE_STRING);
         		$pet_age = filter_var($_POST['pet_age'], FILTER_SANITIZE_NUMBER_INT);
-				$pet_weight = filter_var($_POST['pet_weight'], FILTER_SANITIZE_NUMBER_INT);
+				    $pet_weight = filter_var($_POST['pet_weight'], FILTER_SANITIZE_NUMBER_INT);
         		$pet_description = filter_var($_POST['pet_description'], FILTER_SANITIZE_STRING);
-				
-				
+
+
 
 				$image_tmpname = $_FILES['image_filename']['name'];
-				$imgdir = "images/";
+        // had to change the path where to put the images:
+				$imgdir = "assets/images";
 				$imgname = $imgdir.$image_tmpname;
 				if(move_uploaded_file($_FILES['image_filename']['tmp_name'], $imgname))
 				{
@@ -111,7 +112,7 @@
 					}
 					addPet($imgname, $pet_name,$pet_species,$pet_breed,$pet_age,$pet_weight,$pet_description);
 					chmod($imgname, 0755);
-					
+
 				}
 
         	}
@@ -146,15 +147,15 @@
         		}catch(PDOException $e){
         			echo $e->getMessage();
         		}
-				
+
         	}
 
         ?>
 
         </div>
-		
-		
-        <?php 
+
+
+        <?php
 		/* Support functions for handling image upload above. */
 		function parseFileSuffix($iType) {
 	if ($iType == 'image/jpeg') {
