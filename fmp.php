@@ -12,10 +12,10 @@
     ?>
   </head>
     <body>
-		
+
 		<!-- Setting up the connection with the database -->
 		<?php $db = new database();?>
-		
+
         <div class="pageContents">
             <?php
             // Setting the heading for the page:
@@ -24,7 +24,7 @@
             ?>
 
 			<div class="forgot_password_heading">
-				<h2>.:Enter in the email for instructions to be sent on how to rest your password:.</h2>
+				<h2>.:Enter in the email for instructions to be sent on how to reset your password:.</h2>
 			</div>
 
             <div class="forgot_password_form">
@@ -36,14 +36,14 @@
             			Email: <input type="email" name="user_email">
             		</div>
 					<hr class="form_divs">
-					<input type="submit" value="Submit" name="send_reset_email"> 
+					<input type="submit" value="Submit" name="send_reset_email">
             	</form>
             	<a href="login.php">Go Back</a>
             </div>
 
         </div>
-        
-        <?php 
+
+        <?php
         	// ALL php code to encapsulate functionality above.
         	if( isset( $_POST['send_reset_email'] ) ){
         		// send the user the email --> sanitizing the input main!
@@ -51,9 +51,9 @@
         		$_SESSION['inputed_email'] = $inputed_email;
         		$db->send_email($inputed_email);
         	}
-        
+
         ?>
-        
+
         <?php include 'footer.php'; ?>
     </body>
   </html>
