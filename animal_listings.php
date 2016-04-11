@@ -59,7 +59,7 @@
 		foreach($result as $row)
 		{?>
 			<p>
-			<img class="animalPhoto" src="<?php echo $row['pet_image_path'];?>" width="300px" height="300px" /><br>
+			<img class="animalImg" src="<?php echo $row['pet_image_path'];?>" width="300px" height="300px" /><br>
 			Name: <?php echo $row['pet_name'];?><br>
 			Species: <?php echo $row['pet_species'];?><br>
 			Breed: <?php echo $row['pet_breed'];?><br>
