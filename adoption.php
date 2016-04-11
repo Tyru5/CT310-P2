@@ -7,7 +7,21 @@
       $title = "Add pet for adoption";
       $session_name = "PetRescue_Malmstrom_Bertolacci"; // need to change this for the new project 2!
       include 'header.php';
-	  $max_file_size = 1000000; // small
+      // user has not logged in yet:
+      if(isset($_SESSION['USERNAME'])){
+        // cool, user has logged in!
+      }else{
+        // ALL code to check if the user is logged in;
+          $message = "You can't access this if you are not logged in!";
+          echo "<script type='text/javascript'>alert('$message');</script>";
+          echo "<script type='text/javascript'>setTimeout(\"location.href = 'login.php';\");</script>";
+          // reseting the SESSioN variable
+          unset($_SESSION['USERNAME']);
+          session_unset();
+          session_destroy();
+        }
+
+	    $max_file_size = 1000000; // small
       require_once( "assets/bcrypt/passwordLib.php" ); // for using the password_verify and password_hash functions.
     ?>
   </head>
@@ -146,6 +160,7 @@
                     $dbh->query($sql_pet);
                     $message = "Success! This pet is now part of the site!";
                     echo "<script type='text/javascript'>alert('$message');</script>";
+                    echo "<script type='text/javascript'>setTimeout(\"location.href = 'animal_listings.php';\");</script>";
         		}catch(PDOException $e){
         			echo $e->getMessage();
         		}
