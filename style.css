@@ -324,3 +324,12 @@ input[type=submit]{ /*button for the 'post' comment*/
 	color: #4078c0;
 	font-weight: bold;
 }
+
+#livesearch {
+    width: 200px;
+    margin-left: 10px;
+}
+
+#search_animal {
+    margin-left: 10px;
+}
