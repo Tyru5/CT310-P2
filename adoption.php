@@ -52,8 +52,10 @@
                     Breed: <input type="text" name="pet_breed"><br>
                     Age: <input type="number" name="pet_age"><br>
 					Weight: <input type="number" name="pet_weight"><br>
+          <div class="frmt_response">
 					Description:<br>
                     <textarea placeholder="Pet's description." maxlength="140" name="pet_description"></textarea>
+          </div>
                 </div>
                 <input type="submit" value="Upload" name="submit_pet">
             </form>
