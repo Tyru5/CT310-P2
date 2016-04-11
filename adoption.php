@@ -12,7 +12,7 @@
         // cool, user has logged in!
       }else{
         // ALL code to check if the user is logged in;
-          $message = "You can not access this if you are not logged in!";
+          $message = "You can not access this if you are not logged in! Please Login!";
           echo "<script type='text/javascript'>alert('$message');</script>";
           echo "<script type='text/javascript'>setTimeout(\"location.href = 'login.php';\");</script>";
           // reseting the SESSioN variable
