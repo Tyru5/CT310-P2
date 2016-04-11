@@ -46,6 +46,11 @@
       include "navbar.php"
       ?>
       <div class="about_us_header"><h2 class="abtUsText">Our Animals:</h2></div>
+      <!--Assignment #2 AJAX live search for any animal in our database::tyru5 -->
+      <form>
+          <input id="search_animal" type="text" size="30" placeholder="Search Animal" onkeyup="showAnimal(this.value)">
+          <div id="livesearch"></div>
+      </form>
       <?php
         $animal_tree = new AnimalTree( $ANIMALS_FILE );
 
