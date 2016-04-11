@@ -89,10 +89,11 @@ class database extends PDO{
 
       // function to lookup animal based on the ajax call:
       function search_animal($animal){
-          $animal_stmt = $this->query("SELECT count(*) FROM animals WHERE pet_name LIKE '$animal'");
+          $first_letter = substr($animal, 0,1);
+          $animal_stmt = $this->query("SELECT count(*) FROM animals WHERE pet_name LIKE '$first_letter%'");
           if($animal_stmt->fetchColumn() > 0){
              // echo "exists! <br>";
-             $res = $this->query("SELECT pet_name FROM animals WHERE pet_name = '$animal'");
+             $res = $this->query("SELECT pet_name FROM animals WHERE pet_name LIKE '$first_letter%'");
              return $res->fetchColumn();
           } else {
              // echo "non existant <br>";

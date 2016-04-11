@@ -35,7 +35,7 @@
             }
         }
         xmlhttp.open("GET","animal_search.php?animal="+animal,true); // boolean value defaults to true if you want to send async.
-        xmlhttp.send();
+        xmlhttp.send(null);
     }
     </script>
   </head>
