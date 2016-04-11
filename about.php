@@ -48,11 +48,11 @@
                   Kingdom. We are glad to have him as part of our team!
               </p>
           </div>
-          <h3>Ian Bertolacci</h3>
-          <img src="assets/images/ian.jpg" class="auth_imag" alt="Picture of one of the co-founders: Ian Bertolacci">
+          <h3>Mateus Rocha</h3>
+          <img src="assets/images/mateus.jpg" class="auth_imag" alt="Picture of one of the co-founders: Ian Bertolacci">
           <div class="auth_info">
               <p>
-                Ian Bertolacci is a student and researcher at Colorado State University.
+                Mateus Rocha is a student at Colorado State University.
               </p>
               <p>
                 He likes track jackets, and <a href="https://bandcamp.com/ianbertolacci">music</a> that like, you've probably never heard of man; it's really different stuff.
