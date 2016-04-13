@@ -17,3 +17,6 @@
     <!-- Linking the page to the css file -->
     <link href="style.css" rel="stylesheet" type="text/css">
     <!-- I will NOT include the end </head> tag or the start of the <body> tag in here. I want that to be on the specific page itself -->
+    <!--Loading JQuery library and the JQuery UI library-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
