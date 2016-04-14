@@ -87,7 +87,7 @@
       $ip = $_SERVER['REMOTE_ADDR'];
       $ip = substr($ip, 0,9);
      ?>
-     <?php if($ip == '129.82.44' || $ip == '129.82.45' || $ip == '129.82.46') : ?>
+     <?php if( $ip == '129.82.44' || $ip == '129.82.45' ) : ?>
     <div class="create_account">
         New to this site? <a id="create_account_link" href="create_account.php">Create an account</a>.
     </div>

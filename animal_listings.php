@@ -31,7 +31,7 @@
             // cheking the state of the ajax object:
             if( xmlhttp.readyState == 4 && xmlhttp.status == 200){ // More info here: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
                 document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
-                document.getElementById("livesearch").style.border="1px solid #0c1924";
+                document.getElementById("livesearch").style.border="1px solid #4A7023";
             }
         }
         xmlhttp.open("GET","animal_search.php?animal="+animal,true); // boolean value defaults to true if you want to send async.
