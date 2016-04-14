@@ -10,6 +10,10 @@ $db = new database();
   $hint = "exits";
   $animal = $db->search_animal($id);
   // var_dump($animal);
+  // if the value is NULL, set hint to specified value:
+  if( $animal == NULL ){
+    $hint = "";
+  }
   if($animal){?>
 
     <?php foreach($animal as $row): ?>
@@ -27,7 +31,7 @@ $db = new database();
 <?php
 // Set output to "no suggestion" if no hint was found
 // or to the correct values
-if ($hint=="") {
-  $response="No such animal exits here!";
+if ( $hint == "" ) {
+  echo "No such animal exits here!";
 }
 ?>
